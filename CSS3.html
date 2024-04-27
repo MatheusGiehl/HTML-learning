@@ -1,0 +1,46 @@
+<!--3 formas de inserir CSS :-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como usar CSS</title>
+    <!--CSS externo-->
+    <link rel="stylesheet" href="CSS3.css"/>
+
+     <!--CSS interno-->
+     <style>
+        #azul {
+        color: blue;
+        } 
+     </style>
+
+</head>
+<body>
+    <!--CSS inline-->
+    <h1 style="color: red;">Vermelho</h1>
+    <!--id = especifica uma identificação ÚNICA para o elemento HTML.-->
+    <h1 id="azul">Azul</h1>
+    <!--class = são uma forma de identificar um GRUPO de elementos-->
+    <h1 class="verde">Verde</h1>
+
+            <!--Existem 5 tipos de seleção no css
+            -Pela tag do elemento: 
+            h1 {color : red;}
+            -Pela id(#):
+            #azul {color : blue;}
+            -Pela class(.):
+            .verde {color : green;}
+            -Pode selecionar 2 itens ao mesmo tempo quando quiser aplicar a mesma propriedade : 
+            .class,
+            .class2{
+                color : red;
+            }
+            -Selecionar um elemento dentro de outro :
+            ol li {
+                color: blue;
+            }
+            -->
+
+</body>
+</html>
