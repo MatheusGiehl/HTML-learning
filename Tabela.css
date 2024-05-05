@@ -1,0 +1,32 @@
+table {
+    width: 750px;
+}
+
+/* alinhas na esquerda -> text-align : left*/
+th, td {
+    border: 1px solid #000;
+    text-align: left;
+}
+
+table thead {
+    background-color: #DDA;
+}
+
+table tbody {
+    background-color: #DDE;
+}
+td:hover {
+    background-color: #EEE;
+}
+
+/*
+:nth-child(even) -> A pseudo-classe nth-child é usada com apenas um argumento, que representa o padrão usado para selecionar os elementos. 
+odd :
+Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.
+even :
+Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/:nth-child
+*/
+tbody tr:nth-child(even){
+    background-color: aqua;
+}
