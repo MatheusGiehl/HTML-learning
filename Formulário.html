@@ -10,7 +10,7 @@
     <!--Todos formulários HTML começam com um elemento <form>-->
     <!--O atributo action define o local (uma URL) em que os dados recolhidos do formulário devem ser enviados.-->
     <!--O atributo method define qual o método HTTP para enviar os dados (ele pode ser "GET" ou "POST")-->
-    <form action="https://youtube.com">
+    <form action="https://developer.mozilla.org/pt-BR/docs/Learn/Forms/Your_first_form">
         <!--No elemento <input> , o atributo mais importante é o atributo type. Esse atributo é extremamente importante porque define a forma como o elemento <input> se comporta.
         text = texto 
         password = senha 
@@ -18,9 +18,39 @@
         checkbox = campo para marcação
         radio = usado para marcar apenas uma opção, como numa prova por exemplo, precisa vir acompanhado da tag name=""("""grupos""")
         submit = enviar
+        color : escolher cor 
+        date : escolher data 
+        datetime-local - data e tempo 
+        month : mês e ano 
+        number : aceita apenas números
+        range : escolha 
+        search : pesquisa 
+        tel : telefone
+        time : hora 
+        url : aceita url 
+        week : escolha a semana do ano 
         -->
         <!--name = O nome do controle, que é enviado junto com os dados do formulário.-->
-        <input type="text" name="nome"/>
+        <!--value = O valor inicial do controle. Este atributo é opcional exceto quando o valor do atributo type for radio ou checkbox.-->
+        <input type="text" name="usuario"/>
+        <input type="submit">
+        <!--O elemento HTML select (<select>) representa um controle que apresenta um menu de opções.-->
+            <select name="ordem">
+                <option value="maisvendidos">Mais Vendidos</option>
+                <option value="recentes" selected>Recentes</option>
+                <option value="preco">Preço decrescente</option>
+            </select>
+
+        <!--O elemento HTML <textarea> representa um controle de edição para uma caixa de texto-->
+        <textarea name="descricao"></textarea>
+
+        <!--O Elemento HTML <button> representa um botão clicável
+        Pode ser usado dentro e fora do form, serve como um submit.
+        -->
+        <button>Enviar</button><br/>
+        <!--Um elemento HTML <label> representa uma legenda para um item em uma interface de usuário.-->
+        <label for="nome">Seu nome</label><br/>
+        <input type="text" id="nome">
     </form>
     <h2>Login</h2>
     <form>
