@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Fieldset e Legend</title>
+</head>
+<body>
+    <!-- <fieldset> Ajuda a separar os inputs em campos, com diferentes categorias -->
+    <!-- <legend> Nomeia um <fieldset> -->
+    <form method="post" action="https://www.youtube.com/watch?v=9AVas1D3Mbo">
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <label>
+                Nome : <br>
+                <!-- required -> torna o campo obrigatório -->
+                <!-- minlength -> tamanho mínimo de carácteres -->
+                <input type="text" name="name" required minlength="5">
+            </label> <br>
+            <label>
+                Sobrenome : <br> 
+                <input type="text" name="lastname" >
+            </label><br>
+            <label>
+                Idade : <br> 
+                <!-- min -> usado para o número mínimo -->
+                <!-- max -> número máximo -->
+                <input type="number" name="age" min="18">
+            </label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Contato :</legend>
+            <label>
+                Número de telefone : <br>
+                <input type="number" name="number">
+            </label><br>
+            <label>
+                Email : <br>
+                <!-- pattern -> criar padrões para preenchimento de campos através de expressões regulares -->
+                <input type="text" name="email" required pattern="(^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$)" title="Endereço de email.">
+            </label>
+        </fieldset>
+                <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
