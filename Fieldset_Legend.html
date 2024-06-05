@@ -8,7 +8,10 @@
 <body>
     <!-- <fieldset> Ajuda a separar os inputs em campos, com diferentes categorias -->
     <!-- <legend> Nomeia um <fieldset> -->
-    <form method="post" action="https://www.youtube.com/watch?v=9AVas1D3Mbo">
+    <!-- Quando queremos enviar arquivos juntos com o formulário usamos enctype="multipart/form-data", assim o navegador converte o arquivo em bytes para o servidor -->
+    <form method="get" action="servidor.php" enctype="multipart/form-data">
+        <!-- type="hidden" -> Um controle que não é exibido mas cujo valor é enviado ao servidor. -->
+        <input type="text" name="country" value="br">
         <fieldset>
             <legend>Dados Pessoais:</legend>
             <label>
@@ -19,20 +22,27 @@
             </label> <br>
             <label>
                 Sobrenome : <br> 
-                <input type="text" name="lastname" >
+                <input type="text" name="lastname"required>
             </label><br>
             <label>
                 Idade : <br> 
                 <!-- min -> usado para o número mínimo -->
                 <!-- max -> número máximo -->
-                <input type="number" name="age" min="18">
+                <input type="number" required name="age" min="18">
             </label><br>
+            <label>
+                Foto de perfil : <br>
+                <!-- Para enviarmos arquivos para o navegador usamos o type="file"  -->
+                <!-- Para pré-selecionar o tipo do arquivo usamos o atributo accept -->
+                <!-- Se queremos por exemplo enviar uma imagem por exemplo damos ao atributo accept o valor = image/*  -->
+                <input type="file" name="profilepic" accept="image/*">
+            </label>
         </fieldset>
         <fieldset>
             <legend>Contato :</legend>
             <label>
                 Número de telefone : <br>
-                <input type="number" name="number">
+                <input type="number" required name="number" minlength="11">
             </label><br>
             <label>
                 Email : <br>
