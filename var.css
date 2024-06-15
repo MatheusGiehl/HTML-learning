@@ -1,0 +1,22 @@
+/* Para declarar variáveis globais usa-se :root (se equipara à raiz de uma árvore, que por sua vez representa o documento Aplicado ao HTML, :root representa o elemento <html> e é idêntico ao seletor html .) */
+
+:root {
+    --bg-color : #000;
+    --bg-secont : #444;
+    --font-color : #FFF ;
+}
+
+/* Para usá-las basta usar var(varivel_criada) */
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    color: var(--font-color);
+}
+
+.container {
+    background-color: var(--bg-secont);
+    color: var(--font-color);
+}
